@@ -14,3 +14,5 @@ Python codes for algorithms
 * **Inverting Binary Tree** (https://www.educative.io/edpresso/how-to-invert-a-binary-tree)
 
   An inversion, or mirror, of a Binary Tree (T), is just a Binary Tree M(T) whose left and right children (of all non-leaf nodes) are swapped.
+
+* **Reversing a Linked List** (Self-explanatory)
