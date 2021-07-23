@@ -65,12 +65,19 @@ def level_order_traversal(root):
         if current.right: queue.append(current.right)
 
 # Recursion
+# Since we have to travel to each node once, the time complexity is O(n).
+# This solution is bound to the call stack with auxiliary space O(h), where h is the height of the tree.
+# If we have a horribly unbalanced tree, i.e. a chain of n nodes, our worst case auxiliary space is O(n) as well.
+# As with any recursive problem, stack overflow can happen for a large tree.
+
 def invert_tree_recursion(root):
     if root:
         root.left, root.right = invert_tree_recursion(root.right), invert_tree_recursion(root.left)
         return root
 
 # Iteration
+# The time complexity is O(n), and worst case space complexity is O(n). We no longer have to worry about the call stack, and so these iterative cases are more robust.
+
 # 1. DFS using stacks (DFS involves searching a node and all its children before proceeding to its siblings)
 def invert_tree_dfs(root):
     stack = [root]
